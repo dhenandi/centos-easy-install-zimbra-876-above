@@ -5,7 +5,7 @@ clear
 echo -n "Enter your Hostname (ex : mail/webmail) : "
 read HOST_NAME
 
-echo -n "Enter your Hostname (ex : dhenandi.com) : "
+echo -n "Enter your Domain (ex : dhenandi.com) : "
 read DOMAIN_NAME
 
 ##########
