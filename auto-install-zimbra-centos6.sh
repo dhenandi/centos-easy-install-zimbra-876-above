@@ -2,15 +2,18 @@
 clear
 
 ##### Configure Hostname ######
-echo -n "Enter your Hostname (FQDN) : "
-read host_name
+echo -n "Enter your Hostname (ex : mail/webmail) : "
+read HOST_NAME
+
+echo -n "Enter your Hostname (ex : dhenandi.com) : "
+read DOMAIN_NAME
 
 ##########
 echo "Preparing Configuration..."
 
 #### Variable For Zimbra ####
-HOSTNAME=$(hostname -s)
-DOMAIN=$(hostname -d)
+HOSTNAME=$HOST_NAME
+DOMAIN=$DOMAIN_NAME
 CONTAINERIP=$(ip addr | grep eth0 | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/')
 RANDOMHAM=$(date +%s|sha256sum|base64|head -c 10)
 RANDOMSPAM=$(date +%s|sha256sum|base64|head -c 10)
