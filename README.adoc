@@ -1,0 +1,22 @@
+# Automated Script for Installing Zimbra 8.7.6 or Above In CentOS 6
+
+You can see the article and video on my blog : https://dhenandi.com
+
+Indeed, installing Zimbra Mail Server is easy, you just need to install the dependencies, setup DNS, download the binary according to your operating system and follow the wizard instruction. However, if you often do it like my job, it will take a long time :-D. If it can be automated, why not?
+
+Okay, based on Mr. Jorge automated script for installing zimbra in ubuntu, i have been modified the script to automate installing zimbra in CentOS distribution. Sorry sir, I don’t ask for permission first. 😀
+
+you just need to setup ip (if required, i assumed you are using vps cloud like DigitalOcean, Linode, etc. or you can use this script in docker), and execute the script and it will automaticlly setup zimbra 8.7.11 in your server. But, i haven’t modify script to make a multiple choice for zimbra version.
+
+This script will install zimbra with full package, including new features, zimbra drive and zimbra chat.
+
+[source,bash]
+----
+wget -c https://dhenandi.com/repo/auto-install-zimbra-centos6.sh
+chmod +x auto-install-zimbra-centos6.sh
+./auto-install-zimbra-centos6.sh
+----
+
+If there are some status not running, you need to upgrade your resources. or try to restart service zimbra.
+
+Have a Nice Day.
